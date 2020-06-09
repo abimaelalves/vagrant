@@ -3,7 +3,7 @@ Instalacao Vagrant no Ubuntu 20.04
 1 - Instalacao do VirtualBox,
     https://www.virtualbox.org/wiki/Linux_Downloads
 
-2 - Planejamos criar uma máquina CentOS 7.
+2 - Planejamos criar 3 maquinas CentOS 7.
     Para fazer isso, precisamos encontrar um box apropriado para usar.
     Nesse caso, estamos usando a caixa centos/7, fornecida pelo CentOS
 
