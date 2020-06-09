@@ -1,0 +1,30 @@
+Instalacao Vagrant no Ubuntu 20.04
+
+1 - Instalacao do VirtualBox,
+    https://www.virtualbox.org/wiki/Linux_Downloads
+
+2 - Planejamos criar uma máquina CentOS 7.
+    Para fazer isso, precisamos encontrar um box apropriado para usar.
+    Nesse caso, estamos usando a caixa centos/7, fornecida pelo CentOS. Além do VirtualBox
+
+3 - > sudo apt update
+    > cd ~/Downloads
+    > wget https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_linux_amd64.zip
+    > unzip vagrant_2.2.9_linux_amd64.zip
+    > mv vagrant /usr/local/bin
+
+3 - Ja com o repositorio clonado, acessar a pasta do projeto
+    > cd projeto
+
+4 - Executar os comandos abaixo:
+    Adicionando o box:
+        > vagrant box add centos/7
+        > vagrant init --minimal     # Esse comando ira criar um arquivo Vagrantfile (Porem no projeto ja foi definido os ambientes)
+        > vagrant up                 # Esse comando irá provisionar os ambientes configurados no arquivo Vagrantfile       
+
+
+
+
+
+
+

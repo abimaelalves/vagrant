@@ -1,0 +1,37 @@
+#$samplescript = <<SCRIPT
+#yum install net-tools -y
+#SCRIPT
+Vagrant.configure("2") do |config|
+  config.vm.define "master" do |subconfig|
+    subconfig.vm.box = "centos/7"
+    config.vm.hostname = "master"
+    config.vm.network "private_network", ip: "192.168.50.10"
+#    config.vm.provision "shell", inline: $samplescript
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "512"
+      vb.cpus = "1"
+    end
+  end
+
+  config.vm.define "node1" do |subconfig|
+    subconfig.vm.box = "centos/7"
+    config.vm.hostname = "node1"
+    config.vm.network "private_network", ip: "192.168.50.11"
+#    config.vm.provision "shell", inline: $samplescript
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "512"
+      vb.cpus = "1"
+    end
+  end
+
+  config.vm.define "node2" do |subconfig|
+    subconfig.vm.box = "centos/7"
+    config.vm.hostname = "node2"
+    config.vm.network "private_network", ip: "192.168.50.12"
+#    config.vm.provision "shell", inline: $samplescript
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "512"
+      vb.cpus = "1"
+    end
+  end
+end
